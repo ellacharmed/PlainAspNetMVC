@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+<address>
+    My so secure contact!<br />
+    <abbr title="Phone">P:</abbr>
+    123-JUST-CALL-RIZA
+</address>
+
+<h2>User Identity</h2>
+
+<dl>
+    @foreach (var claim in User.Claims)
+    {
+        <dt>@claim.Type</dt>
+        <dd>@claim.Value</dd>
+    }
+</dl>
+
+
